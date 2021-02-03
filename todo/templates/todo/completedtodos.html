@@ -1,0 +1,10 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+<div class="col-lg-8 col-md-8 offset-md-1 col-sm-12">
+    <h3 class="main-title">Completed Todos</h3>
+    {% for todo in todos %}
+        <p class="completed-todo {% if todo.important %}important-todo{% endif %}">{{ todo.title }} | {{ todo.completed|date:'j M y | H:i a' }}</p>
+    {% endfor %}
+</div>
+{% endblock %}

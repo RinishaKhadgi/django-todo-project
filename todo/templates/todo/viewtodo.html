@@ -1,0 +1,23 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+<div class="col-lg-6 col-md-8 offset-md-1 col-sm-12">
+    <h3 class="main-title">View Todo</h3>
+    {{ error }}
+    <form class="mb-1" action="{% url 'viewtodo' todo.id %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary mt-2">Save</button>
+    </form>
+    
+    <form class="mb-1" action="{% url 'completetodo' todo.id %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">Complete</button>
+    </form>
+    
+    <form action="{% url 'deletetodo' todo.id %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+</div>
+{% endblock %}

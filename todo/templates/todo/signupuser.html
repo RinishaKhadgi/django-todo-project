@@ -1,0 +1,14 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+<div class="col-lg-6 col-md-8 offset-md-1 col-sm-12">
+    <h3 class="main-title">Sign Up</h3>
+    {{ error }}
+    <form action="{% url 'signupuser' %}" method="POST" class="mb-5">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn customBtn">Sign Up</button>
+    </form>
+    <a href="{% url 'loginuser' %}">Have an Account?</a>
+</div>
+{% endblock %}

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body {
+    background-color: rgb(253, 253, 253);
+    font-family: cursive;
+    color: #3a3a3a;
+    padding-bottom: 50px;
+}
+
+#brand, #home-title {
+    font-family: 'Pacifico', cursive;
+}
+
+#logout-button {
+    border: none;
+    background-color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: whitesmoke;
+}
+
+form.dropdown-item:hover {
+    background-color: white;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.main-title {
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+.customBtn {
+    color: white;
+    background-color: #e86491;
+    margin-top: 10px;
+}
+
+.customBtn:hover {
+    color: rgb(241, 241, 241);
+}
+
+.todo-link {
+    text-decoration: none;
+}
+
+.todo, .completed-todo {
+    margin-bottom: 0px;
+    padding: 10px;
+    border: 1px solid #e46e96;
+    border-radius: 7px;
+    color: #6b6b6b;
+    ;
+}
+
+.todo:hover {
+    color: white;
+    background-color: #e46e96;
+}
+
+.important-todo {
+    background-color: #e46e966e;
+    border-color: #e46e96;
+}
+
+.important-todo {}

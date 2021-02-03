@@ -1,0 +1,14 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+<div class="col-lg-6 col-md-8 offset-md-1 col-sm-12">
+    <h3 class="main-title">Create Todo</h3>
+    {{ error }}
+    <form action="{% url 'createtodo' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn customBtn">Create</button>
+    </form>
+</div>
+
+{% endblock %}

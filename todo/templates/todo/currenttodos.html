@@ -1,0 +1,12 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+<div class="col-lg-8 col-md-8 offset-md-1 col-sm-12">
+    <h3 class="main-title">Current Todos</h3>
+    {% for todo in todos %}
+    <a href="{% url 'viewtodo' todo.id %}" class="todo-link">
+        <p class="todo {% if todo.important %}important-todo{% endif %}">{{ todo.title }} {% if todo.memo %} - {{ todo.memo|truncatechars:20 }} {% endif %}</p>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

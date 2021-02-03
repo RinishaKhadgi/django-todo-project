@@ -1,0 +1,15 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-5 mt-5 mb-3" id="home-title">todo</h1>
+    <p class="lead">Create and modify your todos.</p>
+    <hr class="my-4">
+    <p class="lead">
+        {% if user.is_authenticated %}
+        <a class="btn btn-primary" href="{% url 'createtodo' %}">Create</a>
+        {% else %}
+        <a class="btn btn-primary" href="{% url 'signupuser' %}">Register Now</a>
+        {% endif %}
+    </p>
+</div>
+{% endblock %}
